@@ -36,7 +36,7 @@ export default function Intro() {
 					</motion.span>
 				</div>
 			</div>
-
+			<h1 className="hidden">Lennert Pfundtner | Frontend Developer</h1>
 			<motion.p
 				className="mb-10 mt-4 px-4 font-medium text-2xl !leading-[1.5] md:text-3xl lg:text-4xl sm:px-0"
 				initial={{ opacity: 0, y: 100 }}

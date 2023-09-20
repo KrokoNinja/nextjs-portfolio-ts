@@ -6,9 +6,9 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "Lennert Pfundtner",
+	title: "Lennert Pfundtner | Frontend Developer",
 	description:
-		"Frontend Developer from Germany studying Computer Science at IU Internationale Hochschule",
+		"Frontend Developer from Germany studying Computer Science at IU Internationale Hochschule. Currently learning React, TypeScript, Next.js, and Tailwind CSS.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
