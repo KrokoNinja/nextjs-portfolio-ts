@@ -1,4 +1,7 @@
+"use client";
+
 import Image, { StaticImageData } from "next/image";
+import { motion, Variants } from "framer-motion";
 
 interface Props {
 	title: string;
@@ -8,9 +11,30 @@ interface Props {
 }
 
 export default function ProjectCard({ title, description, image, tags }: Props) {
+	const projectVariants: Variants = {
+		hidden: {
+			scale: 0.5,
+		},
+		visible: {
+			scale: 1,
+			transition: {
+				type: "spring",
+				duration: 0.8,
+			},
+		},
+	};
+
 	return (
-		<div className="group mb-10">
-			<div className="flex max-w-xl justify-between relative overflow-hidden bg-gray-100 rounded-lg p-6 group-odd:flex-row-reverse">
+		<motion.div
+			className="group mb-10"
+			initial="hidden"
+			whileInView="visible"
+			viewport={{ once: true }}
+		>
+			<motion.div
+				className="flex max-w-xl justify-between relative overflow-hidden bg-gray-100 rounded-lg p-6 group-odd:flex-row-reverse"
+				variants={projectVariants}
+			>
 				<div className="flex flex-col max-w-[50%]">
 					<h3 className="font-semibold text-xl mb-2">{title}</h3>
 					<p className="mb-2">{description}</p>
@@ -27,7 +51,7 @@ export default function ProjectCard({ title, description, image, tags }: Props) 
 					priority={true}
 					className="absolute w-96 rounded-t-xl -right-40 top-5 group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 transition group-odd:-left-40 group-odd:group-hover:translate-x-3 group-odd:group-hover:rotate-2"
 				/>
-			</div>
-		</div>
+			</motion.div>
+		</motion.div>
 	);
 }
