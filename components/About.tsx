@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 export default function About() {
 	return (
 		<motion.section
+			id="about"
 			className="flex flex-col items-center justify-center p-4 max-w-3xl"
 			initial={{ opacity: 0, y: 100 }}
 			animate={{ opacity: 1, y: 0 }}

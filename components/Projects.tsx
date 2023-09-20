@@ -3,7 +3,7 @@ import ProjectCard from "./ProjectCard";
 
 export default function Projects() {
 	return (
-		<section className="flex flex-col items-center">
+		<section id="projects" className="flex flex-col items-center">
 			<h2 className="text-2xl font-bold mb-6">My Projects</h2>
 			{projectsData.map((project) => (
 				<ProjectCard
